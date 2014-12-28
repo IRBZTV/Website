@@ -1,0 +1,26 @@
+<div id="player">
+	
+</div>
+<script type="text/javascript">
+	jwplayer('player').setup({
+	    'file': 'bazar-3',
+	    'provider': "rtmp",
+	    'streamer': "rtmp://livetv.irib.ir/livepkgr",
+		'height': '260',
+		'width': '460',
+		bufferlength: 5,
+		repeat: "none",
+		stretching: "uniform",
+		smoothing: 'false',
+		'modes': [
+		{ 'type': 'html5' },
+		{ 'type': 'flash', src: '/App_themes/Theme1/mediaplayer/player.swf' },
+		{ 'type': 'download' }
+		],
+		'autostart': 'true',
+		'backcolor': '#efefef',
+		
+		'skin': '/App_themes/Theme1/mediaplayer/skins/bekle/bekle.zip',
+		allowscriptaccess: 'always'
+	});
+</script>

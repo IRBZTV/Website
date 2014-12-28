@@ -1,0 +1,42 @@
+﻿<div class="bazaar box">
+    <section class="box-content">
+        <div class="accordion" id="prices-group">
+            <%
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#prices-group" href="#collapse[ID]">[GROUPTITLE]
+						<span class=" [ICONMODE]  pull-left"></span>                         
+                    </a>
+                </div>
+                <div id="collapse[ID]" class="accordion-body collapse [CLASSOPEN]">                  
+                    <div class="accordion-inner">
+                        <table class="table table-hover table-condensed table-striped">
+                            <thead>
+                                <tr>
+                                    <th>عنوان</th>
+                                    <th>قیمت  <!--([UNIT])--></th>
+                                     <th>واحد  <!--([UNIT])--></th>
+                                    <th>تغییر</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @!
+                                <tr>
+                                    <td>[ITEMTITLE]</td>
+                                    <td>[ITEMPRICE]</td>
+                                     <td>[UNIT]</td>
+                                    <td><span class="[CHANGEICON]">[ITEMCHANGE] <i class=" [CHANGECLASS]"></i></span></td>
+                                </tr>  
+                                !@                             
+                            </tbody>
+                        </table>
+                        <div class="pull-left">
+                            <a class="more-info" href="[FULLLINKURL]" title=" برای مشاهده لیست کامل [FULLLINKTEXT]  کلیک نمایید">لیست کامل  [FULLLINKTEXT]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+           %>       
+        </div>
+    </section>
+</div>

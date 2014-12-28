@@ -1,0 +1,55 @@
+﻿<div id="item">
+    <h2 class="item-title">[TITLE]
+							</h2>
+    <div class="item-toolbar">
+        <ul>
+            <li class="item-date">[DATE]</li>
+            <li class="print">
+                <a href="#" title="Print">
+                    <span class="icon-print"></span>&nbsp;چاپ
+										</a>
+            </li>
+            <li class="send">
+                <a href="#" title="Send Item">
+                    <span class="icon-mail-2"></span>&nbsp;ارسال
+										</a>
+
+            </li>
+        </ul>
+    </div>
+    <div class="item-body">
+        <div class="item-image [VISIBLEITEM]">
+            <span class="image-holder">
+                <img src="[IMAGETOP]" alt="[TITLE]" />
+            </span>
+        </div>
+        <div class="introtext">[DESCRIPTION]</div>
+        [BODY]                        
+         <div class="clearfix"></div>
+        <div class="item-video">
+            <header>
+                <h2>
+                    <span class="header-title">ویدیو</span>
+                </h2>
+            </header>
+            <div class="player-wrapper">
+                <div class="clearfix"></div>
+                <div class="player-inner">
+                    <script>
+                        var playerData = {
+                            file: '[Video]',
+                            image: '[IMAGETOP]',
+                            autostart: false,
+                            autostartOnPlaylistItemClick: true
+                        }
+										</script>
+                    <div id="item-player"></div>
+                </div>                 
+                <div class="clearfix"></div>
+
+            </div>
+             <div class="clearfix"></div>
+                [DOWNLOAD]
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div id="player">
+	
+</div>
+<script type="text/javascript">
+	jwplayer('player').setup({
+	    'file': 'rtmp://91.225.53.88:1935/liveedge/bazar.stream',		
+		'height': '260',
+		'width': '460',
+		bufferlength: 5,
+		repeat: "none",
+		stretching: "uniform",
+		smoothing: 'false',
+		'modes': [
+		{ 'type': 'html5' },
+		{ 'type': 'flash', src: '/App_themes/Theme1/mediaplayer/player.swf' },
+		{ 'type': 'download' }
+		],
+		'autostart': 'true',
+		'backcolor': '#efefef',
+		
+		'skin': '/App_themes/Theme1/mediaplayer/skins/bekle/bekle.zip',
+		allowscriptaccess: 'always'
+	});
+</script>

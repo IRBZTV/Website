@@ -1,0 +1,151 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.master.cs" Inherits="Bazaar.Public" ViewStateMode="Disabled" %>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head runat="server">
+    <meta charset="utf-8" />
+    <!--[if lte IE 10]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>شبکه تلویزیونی بازار</title>
+    <meta name="keywords" content="خبر, اخبار, پایگاه اطلاع رسانی, عکس, فیلم, آخرین, اخبار , اقتصادی ، بازار ، شبکه ، شبکه بازار ، صدا وسیما " />
+    <meta name="description" content=" وب سایت رسمی شبکه تلویزیونی  بازار ، جامعترین پایگاه اطلاع رسانی اقتصادی شامل اخبار مکتوب، فیلم، عکس و چند رسانه ای" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="App_Themes/Theme1/img/logosmall.png" />
+    <link rel="stylesheet" href="/App_Themes/Theme1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/App_Themes/Theme1/css/main.css?20131204" />
+    <link rel="stylesheet" href="/App_Themes/Theme1/css/bazaar-icons.css" />
+
+    <!--[if IE 7]>
+		<link rel="stylesheet" href="/App_Themes/Theme1/css/bazaar-icons-ie7.css"><![endif]-->
+    <script src="/App_Themes/Theme1/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+
+    <header id="header">
+        <%--        	<div class="beta"></div>--%>
+        <div id="header-tools">
+            <div class="container">
+                <div class="row">
+                    <div class="span4">
+                        <div class="pull-left irib-logo">
+                            <a href="http://www.irib.ir" target="_blank"></a>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="search-container pull-left">
+                            <div id="search">
+
+                                <input type="text" name="search" id="txtKeysearch" class="input-medium" value="" placeholder="جستجو" />
+                                <button type="submit" onclick="DoSearch(txtKeysearch.value)"><span class="icon-search"></span></button>
+                            </div>
+                            <div class="date pull-left">
+
+                                <asp:Label ID="LblDateTime" runat="server"></asp:Label>
+                                <span class="icon-calendar"></span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo span7 offset1">
+                        <h1 class="pull-right">
+                            <a href="/">شبکه تلویزیونی بازار
+							</a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="MainMenu" runat="server">
+        </asp:ContentPlaceHolder>
+    </header>
+    <section id="mainbody">
+        <div class="container">
+            <!-- Stocks -->
+            <div class="row">
+                <asp:ContentPlaceHolder runat="server" ID="TopCplcHolder"></asp:ContentPlaceHolder>
+            </div>
+            <!-- //Stocks -->
+            <div class="row">
+                <aside id="sidebar" class="span4">
+                    <asp:ContentPlaceHolder runat="server" ID="LeftCplcHolder"></asp:ContentPlaceHolder>
+                </aside>
+                <section id="main" class="span8">
+                    <asp:ContentPlaceHolder runat="server" ID="MainCplcHolder"></asp:ContentPlaceHolder>
+                </section>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span3 offset3">
+                    <ul class="footer-menu">
+                        <li><a href="/search" title="جستجوی پیشرفته"><span class="icon-search"></span>&nbsp;جستجوی پیشرفته</a></li>
+                        <li><a href="/advertising" title="تبلیغ در بازار"><span class="icon-tag"></span>&nbsp;تبلیغ در بازار</a></li>
+                        <li><a href="/feeds" title="RSS"><span class="icon-rss"></span>&nbsp;RSS</a></li>
+                    </ul>
+                </div>
+                <div class="span3">
+                    <ul class="footer-menu">
+                        <li><a href="/live" title="پخش زنده"><span class="icon-eye"></span>&nbsp;پخش زنده</a></li>
+                        <li><a href="/schedules" title="جدول پخش"><span class="icon-th-list-1"></span>&nbsp;جدول برنامه‌ها</a></li>
+                        <li><a href="/aboutus" title="درباره ما"><span class="icon-info"></span>&nbsp;درباره ما</a></li>
+                        <li><a href="/contactus" title="ارتباط با ما"><span class="icon-mail-1"></span>&nbsp;ارتباط با ما</a></li>
+
+                    </ul>
+                </div>
+                <div class="span3">
+                    <ul class="footer-menu">
+                        <li><a href="/" title="صفحه اصلی"><span class="icon-home-1"></span>&nbsp;صفحه اصلی</a></li>
+                        <li><a href="/news" title="اخبار"><span class="icon-globe"></span>&nbsp;اخبار</a></li>
+                        <li><a href="/programs" title="برنامه‌‎ها"><span class="icon-chat-1"></span>&nbsp;برنامه‌‎ها</a></li>
+                        <li><a href="/photos" title="عکس"><span class="icon-camera-1"></span>&nbsp;عکس</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span2">
+                    <div class="pull-left totop">
+                        <a href="#top" title="بازگشت به بالا">بازگشت به بالا
+								&nbsp;<span class="icon-up-open-1"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="span10">
+                    <div class="footer-message">
+                        © حق نشر 1391، تمامی حقوق برای شبکه بازار صدا و سیمای جمهوری اسلامی محفوظ می‌باشد.
+					
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/App_Themes/Theme1/js/vendor/jquery-1.9.0.min.js"></script>
+    <script src="/App_Themes/Theme1/js/vendor/jquery.carouFredSel-6.2.0.min.js"></script>
+    <script src="/App_Themes/Theme1/js/vendor/bootstrap.min.js"></script>
+    <script src="/App_Themes/Theme1/js/main.js?20140123"></script>
+    <script src="/callback/CallBack.js?2014012300"></script>
+
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://77.36.163.148:8080/" : "http://77.36.163.148:8080/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch (err) { }
+    </script>
+    <noscript>
+        <p>
+            <img src="http://77.36.163.148:8080/piwik.php?idsite=1" style="border: 0" alt="" />
+        </p>
+    </noscript>
+
+</body>
+</html>

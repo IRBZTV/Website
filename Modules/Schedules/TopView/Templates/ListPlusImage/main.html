@@ -1,0 +1,29 @@
+﻿<div class="box schedules-container">
+    <div class="clearfix"></div>
+    <ul id="schedules">
+        <%							
+        <li [onairclass] title="[DESC]">
+            <a href="[PROGRAMLINK]" class="schedules-link">
+
+                <span class="photo">
+                    <img src="[IMAGE]" title="[DESC]" alt="[TITLE]" />
+                </span>
+                <span class="time">[TIME]</span>
+                <span class="program">[TITLE]</span>
+            </a>
+            [ONAIRLINKSTART]
+            [ONAIR]
+            [ONAIRLINKEND]
+
+            <div class="clearfix"></div>
+        </li>
+        %>						
+    </ul>
+    <div class="pull-left schedules">
+        <a href="/schedules" title="جدول برنامه ها" class="schedules-link">
+            <div class="clearfix"></div>
+            <span class="icon-clock">جدول برنامه ها</span>         
+		</a>
+    </div>
+    <div class="clearfix"></div>
+</div>

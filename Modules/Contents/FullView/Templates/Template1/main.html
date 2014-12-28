@@ -1,0 +1,65 @@
+﻿<div id="item">
+ <h2 class="item-title">[TITLE]
+							</h2>
+                        <div class="item-toolbar">
+                            <ul>
+                                <li class="item-date">[DATE]</li>
+                                <li class="item-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[VISIT]</li>
+                                <li class="print">
+                                    <a href="[PRINTURL]" title="Print" target="_blank">
+                                        <span class="icon-print"></span>&nbsp;چاپ
+										</a>
+                                </li> 
+                                  <li class="send">
+                                    <a href="[MAILURL]" onclick="window.open(this.href,'emailWindow','width=350,height=400,location=no,menubar=no,resizable=no,scrollbars=no'); return false;" >
+                                        <span class="icon-mail-2"></span>&nbsp;ارسال
+										</a>
+                                </li>                              
+                            </ul>
+                        </div>
+                        <div class="item-body">
+                            <div class="item-image [VISIBLEITEM]">
+                                <span class="image-holder">
+                                    <img src="[IMAGE]" alt="[TITLE]" />
+                                </span>
+                              <!--  <span class="image-caption">آقای رضایی بخشی از مشکلات اقتصادی کشور را سوء مدیریت می داند</span>-->
+                            </div>
+                            <div class="introtext">[DESCRIPTION]</div>
+                            [BODY]                            
+                        <div class="item-gallery [VISIBLEITEMGALLERY]">
+                         <header>
+									<h2>
+										<span class="header-title">گالری تصاویر</span>
+									</h2>
+								</header>
+                            <div class="image-holder">
+                                   <!-- Controls -->
+                                    <div class="figure-controls">
+                                        <a href="#prev" id="fig-prev"><span class="icon-left-open-1"></span></a>
+                                        <a href="#next" id="fig-next"><span class="icon-right-open-1"></span></a>
+                                    </div>
+                                    <!-- //Controls -->
+                                <!-- First Image of list in large size -->
+                                <img src="[IMAGE2]" alt="" />
+                            <h3 class="gallery-caption">[TITLE]</h3>
+                            </div>
+                            <div class="carousel">
+                                <div class="carousel-controls">
+                                    <a href="#left" id="left"><span class="icon-left-open-1"></span></a>
+                                    <a href="#right" id="right"><span class="icon-right-open-1"></span></a>
+                                </div>
+                                <ul>                                    
+                                    <%
+                                    <li [THUMBCLASS] >
+                                        <a href="#" data-source="[IMAGE]" title="[TITLE]" class="thumb-holder">
+                                          
+                                                <img src="[IMAGE]" alt="[TITLE]" />
+                                          
+                                        </a>
+                                    </li> 
+                                    %>                                                                      
+                                </ul>
+                            </div>
+                        </div>                                                                          
+                    </div>      
+</div>
