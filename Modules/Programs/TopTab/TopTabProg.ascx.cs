@@ -103,7 +103,7 @@ namespace Bazaar.Modules.Programs.TopTab
                     {
                         foreach (var item in SessionsList)
                         {
-                            Body.Append(" <tr " + TrClass + "><td> <a href=\"" +"/program/" + item.ID + "/" + Bazaar.Core.Utility.ClearTitle(item.TITLE) + "/sessionlist/" + "\"  class=\"schedules-link\"><span class=\"photo\">");
+                            Body.Append(" <tr " + TrClass + "><td> <a href=\"" + "/program/" + ProgLst[i].ID + "/" + ProgLst[i].TITLE + "/" + "session/"+item.ID+"/" + Bazaar.Core.Utility.ClearTitle(item.TITLE)+ "\"  class=\"schedules-link\"><span class=\"photo\">");
                             Body.Append("<img src=\"" + ThumbnailGenerator.Generate(item.IMAGE, 100, 0) + "\" title=\"" + Utility.GD2StringDateTime((DateTime)item.DATETIME) + "\" alt=\"" + item.TITLE + "\" />");
 
                             Body.Append("</span><h3>" + item.TITLE + "-" + Utility.GD2StringDate((DateTime)item.Play_DATETIME) + "<a href=\"/live\">" + Onair + "</a></h3></td>  </tr>");
