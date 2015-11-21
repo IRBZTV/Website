@@ -75,7 +75,7 @@ namespace Bazaar
             //Photo Main Page
             routes.MapPageRoute("photos", "photos", "~/Pages/photos.aspx");
             routes.MapPageRoute("gallery", "gallery/{GalleryID}/{GalleryTitle}", "~/Pages/photos_Viewer.aspx");
-            routes.MapPageRoute("photosPage", "gallery/{GalleryKind}", "~/Pages/photos.aspx");
+            routes.MapPageRoute("photosPage", "galleries/{GalleryKind}", "~/Pages/photos.aspx");
 
             //Price
             routes.MapPageRoute("prices", "prices", "~/Pages/prices.aspx");

@@ -33,9 +33,9 @@ namespace Bazaar.Modules.Menu
                 if(item.ID==1015)
                 {
                     Str.Append(" <li class='" + Css + "'><a href='" + item.PATH + "'>" + item.TITLE + "</a><ul class=\"child\">");
-                    Str.Append("<li><a href=\"/gallery/1\">بازار</a></li>");
-                    Str.Append("<li><a href=\"/gallery/2\">برنامه ها</a></li>");
-                    Str.Append("<li><a href=\"/gallery/3\">نشست ها</a></li>");
+                    Str.Append("<li class=\"active\"><a href=\"/galleries/1\">بازار</a></li>");
+                    Str.Append("<li class=\"active\"><a href=\"/galleries/2\">برنامه ها</a></li>");
+                    Str.Append("<li class=\"active\"><a href=\"/galleries/3\">نشست ها</a></li>");
                     Str.Append("</ul></li>");
                 }
                 else

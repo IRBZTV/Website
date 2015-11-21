@@ -23,10 +23,10 @@ namespace Bazaar.Modules.Gallery.Albums
 
 
 
-            string featured = "<div class=\"featured\">  <div class=\"image-holder\">   <a href=\"[LINK]\"> <img src=\"[IMGSRC]\"  alt=\"[IMGALT]\" />   </a>    </div>        <h2><a href=\"[LINK]\">[TITLE]</a></h2>        <div class=\"introtext\">            [DESC]	        </div>        <div class=\"clearfix\"></div>    </div>";
+            string featured = "<div class=\"featured\">  <div class=\"image-holder\">   <a target=\"_blank\" href=\"[LINK]\"> <img src=\"[IMGSRC]\"  alt=\"[IMGALT]\" />   </a>    </div>        <h2><a target=\"_blank\" href=\"[LINK]\">[TITLE]</a></h2>        <div class=\"introtext\">            [DESC]	        </div>        <div class=\"clearfix\"></div>    </div>";
 
-            string Cols = "  <div class=\"item [CLASS]\">            <div class=\"image-holder\">                <a href=\"[LINK]\">                    <img src=\"[IMGSRC]\" alt=\"[IMGALT]\" />                </a>            </div>            <h3><a href=\"[LINK]\">[TITLE]</a></h3>        </div>";
-            string ThreeCols = " <div class=\"item [CLASS]\">        <div class=\"image-holder\">             <a href=\"[LINK]\">                    <img src=\"[IMGSRC]\"  alt=\"[IMGALT]\" />                </a>        </div>            <h3><a href=\"[LINK]\">[TITLE]</a></h3>    </div>            ";
+            string Cols = "  <div class=\"item [CLASS]\">            <div class=\"image-holder\">                <a target=\"_blank\" href=\"[LINK]\">                    <img src=\"[IMGSRC]\" alt=\"[IMGALT]\" />                </a>            </div>            <h3><a target=\"_blank\" href=\"[LINK]\">[TITLE]</a></h3>        </div>";
+            string ThreeCols = " <div class=\"item [CLASS]\">        <div class=\"image-holder\">             <a  target=\"_blank\" href=\"[LINK]\">                    <img src=\"[IMGSRC]\"  alt=\"[IMGALT]\" />                </a>        </div>            <h3><a target=\"_blank\" href=\"[LINK]\">[TITLE]</a></h3>    </div>            ";
 
 
 
@@ -102,7 +102,7 @@ namespace Bazaar.Modules.Gallery.Albums
             PhotoLst = PhotoSql.SelectByField("ALBUM_ID", Item.ID);
             layoutString = layoutString.Replace("[DESC]", Item.DESCRIPTION);
             layoutString = layoutString.Replace("[TITLE]", Item.TITLE);
-            layoutString = layoutString.Replace("[LINK]", "Gallery/" + Item.ID + "/" + Bazaar.Core.Utility.ClearTitle(Item.TITLE));
+            layoutString = layoutString.Replace("[LINK]", "/Gallery/" + Item.ID + "/" + Bazaar.Core.Utility.ClearTitle(Item.TITLE));
 
             layoutString = layoutString.Replace("[IMGALT]", Item.TITLE);
 
