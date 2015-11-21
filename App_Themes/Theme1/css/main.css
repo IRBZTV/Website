@@ -390,3 +390,9 @@ ul.parts.no-img li span.number { color: #888; font-size: 28px; line-height: 30px
 .box.carousel .thumbs .thumb a .title { display: block; font-size: 16px; text-align: center; }
 
 
+.menu li { position: relative; }
+.menu li .child { position: absolute; right: 0; top: 30px; list-style: none; margin: 0; padding: 0; z-index: 200; display: none; transition: 0.2s all; }
+.menu li:hover .child { display: block; }
+.menu li .child > li { width: 140px; float: none !important; }
+.menu li .child > li a { display: block !important; border-top: 1px solid #3C66B3; }
+.menu li .child > li a:hover { background: #3C66B3 !important; color: #fff !important; }

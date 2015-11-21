@@ -30,7 +30,18 @@ namespace Bazaar.Modules.Menu
                 {
                     Css = " ";
                 }
-                Str.Append(" <li class='" + Css + "'><a href='" + item.PATH + "'>" + item.TITLE + "</a></li>");
+                if(item.ID==1015)
+                {
+                    Str.Append(" <li class='" + Css + "'><a href='" + item.PATH + "'>" + item.TITLE + "</a><ul class=\"child\">");
+                    Str.Append("<li><a href=\"/gallery/1\">بازار</a></li>");
+                    Str.Append("<li><a href=\"/gallery/2\">برنامه ها</a></li>");
+                    Str.Append("<li><a href=\"/gallery/3\">نشست ها</a></li>");
+                    Str.Append("</ul></li>");
+                }
+                else
+                {
+                     Str.Append(" <li class='" + Css + "'><a href='" + item.PATH + "'>" + item.TITLE + "</a></li>");
+                }
             }
             Str.Append("  </ul>");
                     Str.Append(" </nav>");

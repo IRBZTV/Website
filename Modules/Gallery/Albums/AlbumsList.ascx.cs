@@ -13,7 +13,7 @@ namespace Bazaar.Modules.Gallery.Albums
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string SelectCondition = " where active=1   order by datetime desc ";
+            string SelectCondition = " where active=1  and kind="+ Page.RouteData.Values["GalleryKind"].ToString() + "  order by datetime desc ";
 
             List<Bazaar.BusinessLayer.ALBUMS> AlbumLst = new List<BusinessLayer.ALBUMS>();
             Bazaar.BusinessLayer.DataLayer.ALBUMSSql AlbumSql = new BusinessLayer.DataLayer.ALBUMSSql();

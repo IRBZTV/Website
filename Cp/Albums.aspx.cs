@@ -31,8 +31,21 @@ namespace Bazaar.Cp
                 return "~/Cp/Theme/Icon/No.png";
             }
         }
+        protected string GetKind(object InValue)
+        {
+            switch (InValue.ToString())
+            {
+                case "1":
+                    return "بازار";
+                case "2":
+                    return "برنامه";
+                case "3":
+                    return "نشست";
+                default:
+                    return "نا مشخص";
+            }
+        }
 
-         
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {

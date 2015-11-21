@@ -61,6 +61,8 @@ namespace Bazaar.Cp
                      DdlMinute.Items.IndexOf(new ListItem(string.Format("{0:00}", ((DateTime)Alb.DATETIME).Minute),
                          string.Format("{0:00}", ((DateTime)Alb.DATETIME).Minute)));
 
+                    DdlKind.SelectedIndex = DdlKind.Items.IndexOf(DdlKind.Items.FindByValue(Alb.KIND.ToString()));
+
 
 
                 }
@@ -139,7 +141,7 @@ namespace Bazaar.Cp
                 Alb.DESCRIPTION = txtDescription.Text;
                 Alb.PHOTOGRAPHER = txtPhotographer.Text;
 
-
+                Alb.KIND = int.Parse(DdlKind.SelectedValue);
 
                 DateTime CreateTime =
                 Bazaar.Core.Utility.JD2GD(DdlYear.SelectedValue + "/" + DdlMonth.SelectedValue + "/" + DdlDay.SelectedValue);
@@ -157,6 +159,7 @@ namespace Bazaar.Cp
                 Alb.TITLE = txtTitle.Text;
                 Alb.DESCRIPTION = txtDescription.Text;
                 Alb.PHOTOGRAPHER = txtPhotographer.Text;
+                Alb.KIND = int.Parse(DdlKind.SelectedValue);
                 DateTime CreateTime =
                  Bazaar.Core.Utility.JD2GD(DdlYear.SelectedValue + "/" + DdlMonth.SelectedValue + "/" + DdlDay.SelectedValue);
                 CreateTime = CreateTime.AddHours(double.Parse(DdlHour.SelectedValue));

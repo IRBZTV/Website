@@ -5,23 +5,24 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<form id="form1" runat="server">
-    <!--[if gt IE 8]><!-->
-    <html class="no-js">
-    <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>شبکه بازار</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="Cp/Theme/css/bootstrap.min.css">
-        <link rel="stylesheet" href="Cp/Theme/css/icons.min.css">
-        <!--[if lte IE 7]><link rel="stylesheet" href="Cp/Theme/css/icons-ie7.min.css"><![endif]-->
-        <link rel="stylesheet" href="Cp/Theme/css/main.css">
-        <script src="Cp/Theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
+
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>شبکه بازار</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="Cp/Theme/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Cp/Theme/css/icons.min.css">
+    <!--[if lte IE 7]><link rel="stylesheet" href="Cp/Theme/css/icons-ie7.min.css"><![endif]-->
+    <link rel="stylesheet" href="Cp/Theme/css/main.css">
+    <script src="Cp/Theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
         <div class="container">
             <div class="row">
                 <asp:Login ID="Login1" runat="server" MembershipProvider="MyMembershipProvider" DestinationPageUrl="~/cp/DashBoard" RenderOuterTable="False" OnLoggingIn="Login1_LoggingIn">
@@ -53,7 +54,7 @@
                                         </div>
                                     </div>
                                 </div>
-                               <%-- <div class="control-group" style="display:none">
+                                <%-- <div class="control-group" style="display:none">
                                     <div class="controls">
                                         <div class="input-append">
                                             <span class="add-on"><i class="icon-cogs"></i></span>
@@ -75,6 +76,7 @@
         <script src="Cp/Theme/js/vendor/jquery-1.9.1.min.js"></script>
         <script src="Cp/Theme/js/vendor/bootstrap.min.js"></script>
         <script src="Cp/Theme/js/main.js"></script>
-    </body>
-    </html>
-</form>
+    </form>
+</body>
+</html>
+

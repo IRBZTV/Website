@@ -50,7 +50,7 @@ namespace Bazaar.BusinessLayer.DataLayer
                 sqlCommand.Parameters.Add(new SqlParameter("@DATETIME", SqlDbType.DateTime, 8, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.DATETIME));
                 sqlCommand.Parameters.Add(new SqlParameter("@PHOTOGRAPHER", SqlDbType.NVarChar, 500, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.PHOTOGRAPHER));
                 sqlCommand.Parameters.Add(new SqlParameter("@HomePage", SqlDbType.Bit, 1, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.HomePage));
-
+                sqlCommand.Parameters.Add(new SqlParameter("@Kind", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KIND));
 
                 MainConnection.Open();
 
@@ -94,6 +94,7 @@ namespace Bazaar.BusinessLayer.DataLayer
                 sqlCommand.Parameters.Add(new SqlParameter("@DATETIME", SqlDbType.DateTime, 8, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.DATETIME));
                 sqlCommand.Parameters.Add(new SqlParameter("@PHOTOGRAPHER", SqlDbType.NVarChar, 500, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.PHOTOGRAPHER));
                 sqlCommand.Parameters.Add(new SqlParameter("@HomePage", SqlDbType.Bit, 1, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.HomePage));
+                sqlCommand.Parameters.Add(new SqlParameter("@Kind", SqlDbType.Int, 4, ParameterDirection.Input, false, 0, 0, "", DataRowVersion.Proposed, businessObject.KIND));
 
 
                 MainConnection.Open();
@@ -439,6 +440,10 @@ namespace Bazaar.BusinessLayer.DataLayer
             if (!dataReader.IsDBNull(dataReader.GetOrdinal(ALBUMS.ALBUMSFields.HomePage.ToString())))
             {
                 businessObject.HomePage = dataReader.GetBoolean(dataReader.GetOrdinal(ALBUMS.ALBUMSFields.HomePage.ToString()));
+            }
+            if (!dataReader.IsDBNull(dataReader.GetOrdinal(ALBUMS.ALBUMSFields.KIND.ToString())))
+            {
+                businessObject.KIND = dataReader.GetInt32(dataReader.GetOrdinal(ALBUMS.ALBUMSFields.KIND.ToString()));
             }
 
 

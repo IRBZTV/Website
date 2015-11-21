@@ -14,7 +14,8 @@ namespace Bazaar.BusinessLayer
 			PATH,
 			TITLE,
 			PRIORITY,
-			ALBUM_ID
+			ALBUM_ID,
+            KIND
 		}
 		#endregion
 
@@ -26,12 +27,13 @@ namespace Bazaar.BusinessLayer
 			string _tITLE;
 			int? _pRIORITY;
 			int? _aLBUM_ID;
+            int? _kIND;
 
-		#endregion
+        #endregion
 
-		#region Properties
+        #region Properties
 
-		public int  ID
+        public int  ID
 		{
 			 get { return _iD; }
 			 set
@@ -108,13 +110,25 @@ namespace Bazaar.BusinessLayer
 				 }
 			 }
 		}
+        public int? KIND
+        {
+            get { return _kIND; }
+            set
+            {
+                if (_kIND != value)
+                {
+                    _kIND = value;
+                    PropertyHasChanged("KIND");
+                }
+            }
+        }
 
 
-		#endregion
+        #endregion
 
-		#region Validation
+        #region Validation
 
-		internal override void AddValidationRules()
+        internal override void AddValidationRules()
 		{
 			ValidationRules.AddRules(new Validation.ValidateRuleNotNull("ID", "ID"));
 			ValidationRules.AddRules(new Validation.ValidateRuleStringMaxLength("PATH", "PATH",2147483647));

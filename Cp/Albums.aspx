@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false"
-        CssClass="requests table table-striped table-bordered table-hover" OnRowCommand="GridView1_RowCommand" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="10" >
+        CssClass="requests table table-striped table-bordered table-hover" OnRowCommand="GridView1_RowCommand" AllowPaging="True" OnPageIndexChanging="GridView1_PageIndexChanging" PageSize="50" >
         <Columns>
               <asp:TemplateField HeaderText="#">
               <ItemTemplate>
@@ -26,6 +26,12 @@
               <asp:TemplateField HeaderText="تاریخ">
               <ItemTemplate>                 
               <%# Bazaar.Core.Utility.GD2StringDateTime( DateTime.Parse(Eval("DATETIME").ToString()))%>
+              </ItemTemplate>
+                  <ItemStyle Width="200" />
+          </asp:TemplateField>  
+               <asp:TemplateField HeaderText="نوع">
+              <ItemTemplate>                 
+              <%# GetKind(Eval("KIND").ToString())%>
               </ItemTemplate>
                   <ItemStyle Width="200" />
           </asp:TemplateField>  

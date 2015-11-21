@@ -15,8 +15,9 @@ namespace Bazaar.BusinessLayer
 			DESCRIPTION,
 			DATETIME,
 			PHOTOGRAPHER,
-			HomePage
-		}
+			HomePage,
+            KIND
+        }
 		#endregion
 
 		#region Data Members
@@ -28,6 +29,7 @@ namespace Bazaar.BusinessLayer
 			DateTime? _dATETIME;
 			string _pHOTOGRAPHER;
 			bool? _homePage;
+        int _kIND;
 
 		#endregion
 
@@ -45,8 +47,20 @@ namespace Bazaar.BusinessLayer
 				 }
 			 }
 		}
+        public int KIND
+        {
+            get { return _kIND; }
+            set
+            {
+                if (_kIND != value)
+                {
+                    _kIND = value;
+                    PropertyHasChanged("KIND");
+                }
+            }
+        }
 
-		public string  TITLE
+        public string  TITLE
 		{
 			 get { return _tITLE; }
 			 set

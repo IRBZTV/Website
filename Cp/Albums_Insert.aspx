@@ -54,6 +54,7 @@
                         <td>روز</td>
                         <td>ساعت</td>
                         <td>دقیقه</td>
+                        <td>نوع</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
@@ -75,6 +76,13 @@
                         </td>
                         <td>
                             <asp:DropDownList ID="DdlMinute" runat="server" Font-Names="B Yekan" Width="100px">
+                            </asp:DropDownList>
+                        </td>
+                        <td>
+                            <asp:DropDownList ID="DdlKind" runat="server" Font-Names="B Yekan" Width="100px">
+                                <asp:ListItem Text="بازار" Value="1">بازار </asp:ListItem>
+                                  <asp:ListItem Text="برنامه ها" Value="2">برنامه ها </asp:ListItem>
+                                  <asp:ListItem Text="نشست ها" Value="3">نشست ها </asp:ListItem>
                             </asp:DropDownList>
                         </td>
                         <td>
