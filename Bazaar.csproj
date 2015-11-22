@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,6 +85,7 @@
     <Content Include="App_Themes\Theme1\img\player-inner.jpg" />
     <Content Include="App_Themes\Theme1\img\texture.jpg" />
     <Content Include="App_Themes\Theme1\img\texture.png" />
+    <Content Include="App_Themes\Theme1\img\tv5.png" />
     <Content Include="App_Themes\Theme1\js\main.js" />
     <Content Include="App_Themes\Theme1\js\vendor\bootstrap.min.js" />
     <Content Include="App_Themes\Theme1\js\vendor\jquery-1.9.0.min.js" />

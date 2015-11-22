@@ -87,6 +87,7 @@
                         <li><a href="/search" title="جستجوی پیشرفته"><span class="icon-search"></span>&nbsp;جستجوی پیشرفته</a></li>
                         <li><a href="/advertising" title="تبلیغ در بازار"><span class="icon-tag"></span>&nbsp;تبلیغ در بازار</a></li>
                         <li><a href="/feeds" title="RSS"><span class="icon-rss"></span>&nbsp;RSS</a></li>
+                        <li><a href="http://tv5.ir" target="_blank" title="TV5"><img width="16" src="/app_themes/theme1/img/tv5.png" />&nbsp;شبکه پنج سیما</a></li>
                     </ul>
                 </div>
                 <div class="span3">
@@ -103,7 +104,7 @@
                         <li><a href="/" title="صفحه اصلی"><span class="icon-home-1"></span>&nbsp;صفحه اصلی</a></li>
                         <li><a href="/news" title="اخبار"><span class="icon-globe"></span>&nbsp;اخبار</a></li>
                         <li><a href="/programs" title="برنامه‌‎ها"><span class="icon-chat-1"></span>&nbsp;برنامه‌‎ها</a></li>
-                        <li><a href="/photos" title="عکس"><span class="icon-camera-1"></span>&nbsp;عکس</a></li>
+                        <li><a href="/galleries/1" title="عکس"><span class="icon-camera-1"></span>&nbsp;عکس</a></li>
                     </ul>
                 </div>
             </div>
@@ -117,7 +118,7 @@
                 </div>
                 <div class="span10">
                     <div class="footer-message">
-                        © حق نشر 1391، تمامی حقوق برای شبکه بازار صدا و سیمای جمهوری اسلامی محفوظ می‌باشد.
+                        © حق نشر 1394، تمامی حقوق برای شبکه بازار صدا و سیمای جمهوری اسلامی محفوظ می‌باشد.
 					
                     </div>
                 </div>

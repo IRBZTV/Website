@@ -396,3 +396,4 @@ ul.parts.no-img li span.number { color: #888; font-size: 28px; line-height: 30px
 .menu li .child > li { width: 140px; float: none !important; }
 .menu li .child > li a { display: block !important; border-top: 1px solid #3C66B3; }
 .menu li .child > li a:hover { background: #3C66B3 !important; color: #fff !important; }
+tv5 { background: url('../img/tv5.png') center top  }
