@@ -17,7 +17,7 @@ namespace Bazaar.Modules.Gallery.Albums
 
             List<Bazaar.BusinessLayer.ALBUMS> AlbumLst = new List<BusinessLayer.ALBUMS>();
             Bazaar.BusinessLayer.DataLayer.ALBUMSSql AlbumSql = new BusinessLayer.DataLayer.ALBUMSSql();
-            AlbumLst = AlbumSql.SelectTopActive(SelectCondition, "100");
+            AlbumLst = AlbumSql.SelectTopActive(SelectCondition, "500");
 
             StringBuilder sb = new StringBuilder();
 
@@ -63,11 +63,11 @@ namespace Bazaar.Modules.Gallery.Albums
                 }
 
 
-                if (i > 5 && i < 51)
+                if (i > 5 && i < 501)
                 {
                     sb.Append("<div class=\"cols-three\">");
 
-                    for (int p = 5; p < 51; p++)
+                    for (int p = 5; p < 501; p++)
                     {
                         if (i < AlbumLst.Count)
                         {
