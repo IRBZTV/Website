@@ -63,9 +63,11 @@ namespace Bazaar.Modules.Programs.Session.List
             {
              
                 string PageAdr= "/program/" + Prog_Item.ID + "/" + Bazaar.Core.Utility.ClearTitle(Prog_Item.TITLE) + "/session/" + item.ID + "/" + Bazaar.Core.Utility.ClearTitle(item.TITLE);
+                string No = "--";
+                if (item.NUMBER != 1000)
+                    No = item.NUMBER.ToString();
 
-
-                Body.Append(" <tr class=\"hastip\" title=\"تاریخ پخش: "+Utility.GD2StringDate((DateTime)item.Play_DATETIME)+"\"><td class=\"item-time\"> <span class=\"time\">" + item.NUMBER + "</span> </td><td><span class=\"photo\">");
+                Body.Append(" <tr class=\"hastip\" title=\"تاریخ پخش: "+Utility.GD2StringDate((DateTime)item.Play_DATETIME)+"\"><td class=\"item-time\"> <span class=\"time\">" +No+ "</span> </td><td><span class=\"photo\">");
                 Body.Append("<img src=\"" + ThumbnailGenerator.Generate(item.IMAGE, 100, 0) + "\" title=\"" + item.TITLE + "\" alt=\"" + item.TITLE + "\" />");
                 Body.Append("</span><h3><a target=\"_blank\" href=\""+PageAdr+"\">" + item.TITLE + "</a></h3></td>  </tr>");
 

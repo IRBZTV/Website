@@ -93,7 +93,10 @@ namespace Bazaar.Modules.Programs.Session.Top
             layoutString = layoutString.Replace("[TITLE]", Prog_Item.TITLE+"-"+Item.TITLE);
             layoutString = layoutString.Replace("[URL]", "/program/" + Prog_Item.ID + "/" + Bazaar.Core.Utility.ClearTitle(Prog_Item.TITLE) + "/session/"+Item.ID+"/"+ Bazaar.Core.Utility.ClearTitle(Item.TITLE)) ;
             layoutString = layoutString.Replace("[IMG]", ThumbnailGenerator.Generate(Item.IMAGE, thumbWidth, 0));
-            layoutString = layoutString.Replace("[SessionNum]", Item.NUMBER.ToString());
+            string No = "--";
+            if (Item.NUMBER != 1000)
+                No = Item.NUMBER.ToString();
+            layoutString = layoutString.Replace("[SessionNum]", No);
             layoutString = layoutString.Replace("[DATETIME]", Utility.GD2StringDateTime((DateTime)Item.DATETIME));
             if (string.IsNullOrEmpty(Item.Play_DATETIME.ToString()))
             {
