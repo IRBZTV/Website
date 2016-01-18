@@ -83,6 +83,7 @@
     <Content Include="App_Themes\Theme1\img\loading.gif" />
     <Content Include="App_Themes\Theme1\img\logoSmall.png" />
     <Content Include="App_Themes\Theme1\img\player-inner.jpg" />
+    <Content Include="App_Themes\Theme1\img\telegram.png" />
     <Content Include="App_Themes\Theme1\img\texture.jpg" />
     <Content Include="App_Themes\Theme1\img\texture.png" />
     <Content Include="App_Themes\Theme1\img\tv5.png" />

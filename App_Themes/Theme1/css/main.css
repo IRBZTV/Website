@@ -35,6 +35,8 @@ h1, h2, h3, h4 { font-family: 'B Yekan', 'BYekan', Times, 'Times New Roman', Ari
 .logo h1 a { display: block; width: 353px; height: 65px; position: absolute; top: 0; left: 0; background: url('../img/logo.png?new') no-repeat 0 0 transparent; }
 .irib-logo { margin: 3px 0 1px 0; }
 .irib-logo a { display: block; width: 54px; height: 45px; background: url('../img/irib-logo.png?new') no-repeat 0 0 transparent; }
+.telegram-logo { margin: 3px 0 1px 0; }
+.telegram-logo a { display: block; width: 54px; height: 45px; background: url('../img/telegram.png?new') no-repeat 0 0 transparent;background-size:contain;margin-left:20px }
 /** Search **/
 #search { position: relative; margin: 2px 0 0 0; zoom: 1; }
 #search input { margin: 0; }

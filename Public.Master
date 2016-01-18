@@ -35,10 +35,12 @@
                         <div class="pull-left irib-logo">
                             <a href="http://www.irib.ir" target="_blank"></a>
                         </div>
+                        <div class="pull-left telegram-logo">
+                            <a href="http://Telegram.me/irib_bazaar" title="کانال تلگرام شبکه بازار" target="_blank"></a>
+                        </div>
                         <div class="clearfix"></div>
                         <div class="search-container pull-left">
                             <div id="search">
-
                                 <input type="text" name="search" id="txtKeysearch" class="input-medium" value="" placeholder="جستجو" />
                                 <button type="submit" onclick="DoSearch(txtKeysearch.value)"><span class="icon-search"></span></button>
                             </div>
